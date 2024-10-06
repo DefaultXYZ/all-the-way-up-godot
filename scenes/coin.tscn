@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dicrpdu11ufkm"]
+
+[ext_resource type="Script" path="res://scripts/coin.gd" id="1_wtdef"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_748os"]
+albedo_color = Color(0.688694, 0.722656, 0.287933, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ygusx"]
+material = SubResource("StandardMaterial3D_748os")
+top_radius = 0.25
+bottom_radius = 0.25
+height = 0.1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_idim1"]
+size = Vector3(1, 1.5, 1)
+
+[node name="Coin" type="Node3D"]
+script = ExtResource("1_wtdef")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0)
+mesh = SubResource("CylinderMesh_ygusx")
+
+[node name="CollectDetector" type="Area3D" parent="."]
+
+[node name="Collision" type="CollisionShape3D" parent="CollectDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("BoxShape3D_idim1")
+
+[connection signal="body_entered" from="CollectDetector" to="." method="_on_collect_detector_body_entered"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx7en2mc4yrp3"]
+
+[ext_resource type="PackedScene" uid="uid://rtvb3mi4ykbv" path="res://imported/floor_1/floor1_two_sided.glb" id="1_htxql"]
+[ext_resource type="Texture2D" uid="uid://c21vrevbye5m" path="res://imported/floor_1/Floor1Material_BaseColor.png" id="2_ftba4"]
+[ext_resource type="Texture2D" uid="uid://2dqt0hs21mh4" path="res://imported/floor_1/Floor1Material_Metallic.png" id="3_jrqrj"]
+[ext_resource type="Texture2D" uid="uid://dgw2txt1rfusr" path="res://imported/floor_1/Floor1Material_Roughness.png" id="4_es6hm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rm63a"]
+albedo_texture = ExtResource("2_ftba4")
+metallic = 1.0
+metallic_texture = ExtResource("3_jrqrj")
+roughness_texture = ExtResource("4_es6hm")
+
+[node name="Floor1" instance=ExtResource("1_htxql")]
+
+[node name="Floor1" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rm63a")

@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://c4ytij6bngxvl"]
+
+[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_1ip3d"]
+[ext_resource type="PackedScene" uid="uid://ckb7xel6xsd86" path="res://scenes/player.tscn" id="1_jxo14"]
+[ext_resource type="PackedScene" uid="uid://diwi0qmhoimi2" path="res://scenes/spawn_point.tscn" id="4_cm3g3"]
+[ext_resource type="PackedScene" uid="uid://gmq3rcitm37g" path="res://scenes/level_environment.tscn" id="4_qm1wp"]
+[ext_resource type="PackedScene" uid="uid://eo5ip3wypdp0" path="res://scenes/finish_point.tscn" id="5_d7dav"]
+[ext_resource type="PackedScene" uid="uid://b7bdn6xi1opdx" path="res://scenes/game_ui.tscn" id="6_auo56"]
+[ext_resource type="PackedScene" uid="uid://byli7vfjj1yxk" path="res://scenes/intro_ui.tscn" id="7_oa76h"]
+[ext_resource type="PackedScene" uid="uid://djk1egv81odor" path="res://scenes/finish_ui.tscn" id="8_fveb3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5x2ue"]
+sky_top_color = Color(0.0210266, 0.0239329, 0.207031, 1)
+sky_horizon_color = Color(0.161469, 0.170866, 0.289063, 1)
+sky_curve = 0.0374996
+ground_bottom_color = Color(0.0486755, 0.0785339, 0.214844, 1)
+ground_horizon_color = Color(0.173752, 0.177929, 0.230469, 1)
+ground_curve = 0.0400001
+
+[sub_resource type="Sky" id="Sky_tvpjr"]
+sky_material = SubResource("ProceduralSkyMaterial_5x2ue")
+
+[sub_resource type="Environment" id="Environment_m1rjw"]
+background_mode = 2
+sky = SubResource("Sky_tvpjr")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.143967, 0.15001, 0.199219, 1)
+fog_density = 1.0
+fog_sky_affect = 0.126
+
+[node name="MainScene" type="Node3D"]
+script = ExtResource("1_1ip3d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_color = Color(0.564148, 0.671508, 0.925781, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_m1rjw")
+
+[node name="Player" parent="." node_paths=PackedStringArray("main_scene") instance=ExtResource("1_jxo14")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35, 44)
+main_scene = NodePath("..")
+
+[node name="LevelEnvironment" parent="." instance=ExtResource("4_qm1wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45.5)
+
+[node name="SpawnPoint1" parent="." instance=ExtResource("4_cm3g3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -35, 44)
+id = 0
+
+[node name="SpawnPoint2" parent="." instance=ExtResource("4_cm3g3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -21.5, -105.5)
+id = 1
+
+[node name="SpawnPoint3" parent="." instance=ExtResource("4_cm3g3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 52, 14.5, -9.5)
+id = 2
+
+[node name="FinishPoint" parent="." instance=ExtResource("5_d7dav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 32.5, -10.5)
+
+[node name="GameUI" parent="." instance=ExtResource("6_auo56")]
+unique_name_in_owner = true
+visible = false
+
+[node name="IntroUI" parent="." node_paths=PackedStringArray("main_scene") instance=ExtResource("7_oa76h")]
+main_scene = NodePath("..")
+
+[node name="FinishUI" parent="." node_paths=PackedStringArray("main_scene") instance=ExtResource("8_fveb3")]
+unique_name_in_owner = true
+visible = false
+main_scene = NodePath("..")

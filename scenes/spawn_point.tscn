@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://diwi0qmhoimi2"]
+
+[ext_resource type="Script" path="res://scripts/spawn_point.gd" id="1_ugrrt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rh4ln"]
+size = Vector3(10, 4, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojmm0"]
+albedo_color = Color(0.263214, 0.709057, 0.976563, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wss4a"]
+material = SubResource("StandardMaterial3D_ojmm0")
+
+[node name="SpawnPoint" type="Node3D" node_paths=PackedStringArray("respawn_node")]
+script = ExtResource("1_ugrrt")
+respawn_node = NodePath("SpawnPos")
+
+[node name="SpawnPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("BoxShape3D_rh4ln")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 4.5)
+mesh = SubResource("CylinderMesh_wss4a")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 4.5)
+mesh = SubResource("CylinderMesh_wss4a")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_spawn_point_area_body_entered"]

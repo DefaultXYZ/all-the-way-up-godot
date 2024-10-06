@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckb7xel6xsd86"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_ary3y"]
+[ext_resource type="Script" path="res://scripts/fall_check.gd" id="2_fq0mo"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e10ki"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ahw0t"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_ary3y")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_e10ki")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ahw0t")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Camera" type="Camera3D" parent="Head"]
+
+[node name="FallCheck" type="Node3D" parent="."]
+script = ExtResource("2_fq0mo")

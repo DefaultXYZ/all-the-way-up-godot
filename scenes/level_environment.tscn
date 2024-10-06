@@ -1,0 +1,249 @@
+[gd_scene load_steps=4 format=3 uid="uid://gmq3rcitm37g"]
+
+[ext_resource type="PackedScene" uid="uid://bx7en2mc4yrp3" path="res://imported/floor_1/floor_1.tscn" id="1_1h6bo"]
+[ext_resource type="PackedScene" uid="uid://dggjka1j5quk5" path="res://imported/ramp/ramp.tscn" id="2_e3cvk"]
+[ext_resource type="PackedScene" uid="uid://vt163shwtm0f" path="res://scenes/ramp_composite.tscn" id="2_q6fro"]
+
+[node name="LevelEnvironment" type="Node3D"]
+
+[node name="LevelWrapper1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35, 44.5)
+
+[node name="RampComposite" parent="LevelWrapper1" instance=ExtResource("2_q6fro")]
+
+[node name="RampComposite2" parent="LevelWrapper1" instance=ExtResource("2_q6fro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -28)
+
+[node name="RampComposite3" parent="LevelWrapper1" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35, 4.5, -23)
+
+[node name="RampComposite4" parent="LevelWrapper1" instance=ExtResource("2_q6fro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 9, -48)
+
+[node name="RampComposite5" parent="LevelWrapper1" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 35, 9, -61)
+
+[node name="Floor1" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="Floor19" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4.5, -13)
+
+[node name="Floor20" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4.5, -13)
+
+[node name="Floor21" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4.5, -23)
+
+[node name="Floor22" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 9, -33)
+
+[node name="Floor26" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 9, -43)
+
+[node name="Floor27" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 9, -43)
+
+[node name="Floor23" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -51)
+
+[node name="Floor24" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 9, -51)
+
+[node name="Floor25" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 9, -61)
+
+[node name="Floor28" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 9, -61)
+
+[node name="Floor2" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+
+[node name="Floor9" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 35)
+
+[node name="Floor10" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
+
+[node name="Floor3" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 15)
+
+[node name="Floor4" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 15)
+
+[node name="Floor5" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 5)
+
+[node name="Floor15" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 5)
+
+[node name="Floor16" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 5)
+
+[node name="Floor17" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 5)
+
+[node name="Floor18" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -5)
+
+[node name="Floor12" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -5)
+
+[node name="Floor6" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 15)
+
+[node name="Floor7" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 15)
+
+[node name="Floor8" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 25)
+
+[node name="Floor11" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 25)
+
+[node name="Floor13" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 25)
+
+[node name="Floor14" parent="LevelWrapper1" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 15)
+
+[node name="LevelWrapper2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -21.5, -21.5)
+
+[node name="Floor29" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Floor30" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -22)
+
+[node name="Floor32" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5, 0, -16)
+
+[node name="Floor33" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5, 0, -33.5)
+
+[node name="Floor31" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -38.5)
+
+[node name="Floor34" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 18, -38.5)
+
+[node name="Floor37" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 18, -28.5)
+
+[node name="Floor38" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 18, -18.5)
+
+[node name="Floor39" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 18, -8.5)
+
+[node name="Floor40" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 18, -8.5)
+
+[node name="Floor41" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 18, -8.5)
+
+[node name="Floor35" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 18, -48.5)
+
+[node name="Floor36" parent="LevelWrapper2" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 18, -48.5)
+
+[node name="ramp" parent="LevelWrapper2" instance=ExtResource("2_e3cvk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -38.5)
+
+[node name="ramp2" parent="LevelWrapper2" instance=ExtResource("2_e3cvk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.5, 4.5, -38.5)
+
+[node name="ramp3" parent="LevelWrapper2" instance=ExtResource("2_e3cvk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22, 9, -38.5)
+
+[node name="ramp4" parent="LevelWrapper2" instance=ExtResource("2_e3cvk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 30.5, 13.5, -38.5)
+
+[node name="ramp5" parent="LevelWrapper2" instance=ExtResource("2_e3cvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, -43.75)
+
+[node name="ramp6" parent="LevelWrapper2" instance=ExtResource("2_e3cvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 4.5, -52.25)
+
+[node name="ramp7" parent="LevelWrapper2" instance=ExtResource("2_e3cvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 9, -60.75)
+
+[node name="ramp8" parent="LevelWrapper2" instance=ExtResource("2_e3cvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 13.5, -69.25)
+
+[node name="RampComposite" parent="LevelWrapper2" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 24, 18, 6.5)
+
+[node name="RampComposite2" parent="LevelWrapper2" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 14, 22.5, 24.5)
+
+[node name="RampComposite5" parent="LevelWrapper2" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4, 27, 42.5)
+
+[node name="RampComposite3" parent="LevelWrapper2" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 34, 22.5, 24.5)
+
+[node name="RampComposite4" parent="LevelWrapper2" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 49, 27, 37.5)
+
+[node name="RampComposite6" parent="LevelWrapper2" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 67, 31.5, 47.5)
+
+[node name="LevelWrapper3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 14.5, 31)
+
+[node name="RampComposite7" parent="LevelWrapper3" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 10)
+
+[node name="RampComposite8" parent="LevelWrapper3" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -90.5, 4.5, 49)
+
+[node name="RampComposite9" parent="LevelWrapper3" instance=ExtResource("2_q6fro")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -75.5, 9, 62)
+
+[node name="RampComposite10" parent="LevelWrapper3" instance=ExtResource("2_q6fro")]
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, -62.5, 13.5, 47)
+
+[node name="Floor42" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, 33)
+
+[node name="Floor43" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4.5, 33)
+
+[node name="Floor44" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5, 4.5, 33)
+
+[node name="Floor45" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.5, 4.5, 33)
+
+[node name="Floor46" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.5, 4.5, 20.5)
+
+[node name="Floor47" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 4.5, 20.5)
+
+[node name="Floor48" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 4.5, 35.5)
+
+[node name="Floor49" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 4.5, 1.5)
+
+[node name="Floor50" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.5, 4.5, 1.5)
+
+[node name="Floor51" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.5, 4.5, 22)
+
+[node name="Floor52" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.5, 4.5, 34)
+
+[node name="Floor53" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.5, 18, 24)
+
+[node name="Floor54" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.5, 18, 14)
+
+[node name="Floor55" parent="LevelWrapper3" instance=ExtResource("1_1h6bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.5, 18, 4)

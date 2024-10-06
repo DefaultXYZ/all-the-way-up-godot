@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://vt163shwtm0f"]
+
+[ext_resource type="PackedScene" uid="uid://dggjka1j5quk5" path="res://imported/ramp/ramp.tscn" id="1_1wpno"]
+[ext_resource type="PackedScene" uid="uid://bx7en2mc4yrp3" path="res://imported/floor_1/floor_1.tscn" id="2_0f757"]
+
+[node name="RampComposite" type="Node3D"]
+
+[node name="ramp" parent="." instance=ExtResource("1_1wpno")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.290524, -0.0331135)
+
+[node name="floor_1" parent="." instance=ExtResource("2_0f757")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -13)
+
+[node name="floor_2" parent="." instance=ExtResource("2_0f757")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
